@@ -2,6 +2,7 @@ from gui import AppGUI
 
 if __name__ == '__main__':
     new_gui = AppGUI()
+    new_gui.start()
 
     # Launch user gui
     # Take user input
