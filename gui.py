@@ -35,10 +35,9 @@ class AppGUI:
         filepath = path.join(base, filename)
 
         with open(filepath, 'a+') as fp:
-            fp.write("[{}]\t{}".format(strftime("%H:%M:%S", localtime()), self.get()))
+            fp.write("[{}]  {}\n".format(strftime("%H:%M:%S", localtime()), self.get()))
 
         self.update()
-        self.show()
 
     def remove(self):
         """ Removes user input from text file
@@ -54,7 +53,7 @@ class AppGUI:
         """ Prints the logs for the day
         """
         base = getcwd()
-        filename = strftime("%m-%d-%Y")
+        filename = strftime("%Y-%d-%m") + ".txt"
         filepath = path.join(base, filename)
 
         with open(filepath, 'r') as fp:
